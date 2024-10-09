@@ -1,36 +1,25 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace FizzBuzz
+public class FizzBuzz
 {
-    public class FizzBuzz
+    public void CountTo(int lastNumber)
     {
-        public void CountTo(int lastNumber)
+        for (int currentNumber = 1; currentNumber <= lastNumber; currentNumber++)
         {
-            for (int aktualniCislo = 1; aktualniCislo < lastNumber; aktualniCislo++)
+            if (currentNumber % 3 == 0 && currentNumber % 5 == 0)
             {
-                if (aktualniCislo % 3 == 0 && aktualniCislo % 5 == 0)
-                {
-                    Console.WriteLine("FizzBuzz");
-                    return;
-                }
-
-                if (aktualniCislo % 3 == 0)
-                {
-                    Console.WriteLine("Fizz");
-                    return;
-                }
-
-                if (aktualniCislo % 5 == 0)
-                {
-                    Console.WriteLine("Buzz");
-                    return;
-                }
-
-                Console.WriteLine(aktualniCislo);
+                Console.WriteLine("FizzBuzz");
+                continue;
             }
+            if (currentNumber % 3 == 0)
+            {
+                Console.WriteLine("Fizz");
+                continue;
+            }
+            if (currentNumber % 5 == 0)
+            {
+                Console.WriteLine("Buzz");
+                continue;
+            }
+            Console.WriteLine(currentNumber);
         }
     }
 }
